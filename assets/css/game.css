@@ -26,11 +26,11 @@
   }
   
   .correct {
-    background-color: #28a745;
+    background-color: #c6f1ad;
   }
   
   .incorrect {
-    background-color: #dc3545;
+    background-color: #f5bcc2;
   }
   
   /* HUD */
