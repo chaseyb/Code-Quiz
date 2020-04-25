@@ -9,6 +9,8 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+var loseSound = new Audio("assets/sounds/Quack.mp3");
+var winSound = new Audio("assets/sounds/Clink.mp3");
 
 var timerInterval;
 var timerCount = 60;
@@ -120,8 +122,10 @@ choices.forEach(choice => {
     if (classToApply === "correct") {
       timerCount = timerCount + 5;
       incrementScore(CORRECT_BONUS);
+      winSound.play();
     } else {
       timerCount = timerCount - 10;
+      loseSound.play();
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
